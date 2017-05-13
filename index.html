@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head lang="pt">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="src/app/module.js"></script>
+        <script src="src/app/weather/weather.controller.js" ></script>
+        <script src="src/app/weather/weather.service.js" ></script>
+        <script src="src/app/shared/constants.js"></script>
+        <script src="src/app/shared/directives/weather.card.directive.js"></script>
+        <script src="src/app/shared/filters/celsius.filter.js"></script>
+        <script type="text/javascript" src="bower_components/angular-weather/src/angular-weather.js"></script>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body ng-app="find.weather" ng-strict-di>
+        <div class="container-fluid">
+            <div ng-include="'src/app/weather/weather.html'"></div>
+        </div>
+    </body>
+</html>

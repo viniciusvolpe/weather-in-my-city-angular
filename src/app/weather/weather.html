@@ -1,0 +1,23 @@
+<div ng-controller="WeatherController as vm">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="text-center" ng-bind="vm.pageTitle"></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+            <form class="form-inline" name="vm.weatherForm">
+                <input type="text" class="form-control" style="width: 80%" minlength="3" ng-model="vm.city" required="" placeholder="Digite o nome da cidade"/>
+                <button class="btn btn-default" type="submit" ng-disabled="vm.weatherForm.$invalid" ng-click="vm.findWeather()" title="Consultar">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+                <button class="btn btn-default" ng-click="vm.limpar()" title="Limpar">
+                    <i class="glyphicon glyphicon-erase"></i>
+                </button>
+            </form>
+            </br>
+            <weather-card model="vm.weather" ng-if="vm.weather"></weather-card>
+            <div class="alert alert-danger" role="alert" ng-if="vm.hasError"><strong>Ops!</strong> Não foi possível encontrar a cidade informada!</div>
+        </div>
+    </div>
+</div>
